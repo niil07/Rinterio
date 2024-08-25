@@ -8,6 +8,9 @@
     <!-- 1. Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <!-- Font awesome link -->
+    <script src="https://kit.fontawesome.com/2798bceebb.js" crossorigin="anonymous"></script>
+
     <!-- 2. DaisyUI (works with Tailwind CSS) -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
 
@@ -23,11 +26,11 @@
     <link href="styles.css" rel="stylesheet">
 
     <!-- Custom css -->
-     <style>
-      body{
-      font-family: "Manrope", sans-serif;
-     }
-     </style>
+    <style>
+      body {
+        font-family: "Manrope", sans-serif;
+      }
+    </style>
 
     <!-- 6. Custom Tailwind Config -->
     <script>
@@ -37,6 +40,10 @@
               colors: {
                 'lgreen': '#ABEF5F',
                 'textcol': '#212121',
+                'dark': '#1C1C1C',
+              },
+              backgroundImage: {
+                'custom': 'linear-gradient(0deg, #FFF 0%, rgba(255, 255, 255, 0) 100%)',
               },
             }
           }
@@ -44,15 +51,32 @@
     </script>
 </head>
 
-<body>
+<body class="bg-gradient-to-t from-white to-transparent">
 
     <!-- Header section code start -->
-     <header class="container mx-auto my-0">
-      <nav class="py-5">
+    <header class="container mx-auto my-0">
+      <nav class="lg:py-5 p-3">
         <div class="navbar bg-base-100">
           <div class="navbar-start">
-            <div class="dropdown">
-              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+            <div class="flex justify-center items-center gap-2">
+              <div class="bg-lgreen p-[6px] rounded-full w-7 h-7 flex justify-center">
+                <i class="-rotate-45 fa-solid fa-arrow-right-long "></i>
+              </div>
+              <a href="index.html" class="text-textcol text-3xl font-extrabold">Rineterio</a>
+            </div>
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+              <li><a class="hover:bg-transparent hover:text-[#494949] text-base hover:font-extrabold duration-700 transition text-[#737373] font-normal">Home</a></li>
+              <li><a class="hover:bg-transparent hover:text-[#494949] text-base hover:font-extrabold duration-700 transition text-[#737373] font-normal">Services</a></li>
+              <li><a class="hover:bg-transparent hover:text-[#494949] text-base hover:font-extrabold duration-700 transition text-[#737373] font-normal">Portfolio</a></li>
+              <li><a class="hover:bg-transparent hover:text-[#494949] text-base hover:font-extrabold duration-700 transition text-[#737373] font-normal">Blogs</a></li>
+              <li><a class="hover:bg-transparent hover:text-[#494949] text-base hover:font-extrabold duration-700 transition text-[#737373] font-normal">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <div class="dropdown dropdown-end">
+              <div tabindex="0" role="button" class="p-3 rounded-full border-2 border-[#E9E9E9] bt lg:hidden">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="h-5 w-5"
@@ -66,42 +90,47 @@
                     d="M4 6h16M4 12h8m-8 6h16" />
                 </svg>
               </div>
-              <ul
-                tabindex="0"
-                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                <li><a>Item 1</a></li>
-                <li>
-                  <a>Parent</a>
-                  <ul class="p-2">
-                    <li><a>Submenu 1</a></li>
-                    <li><a>Submenu 2</a></li>
-                  </ul>
-                </li>
-                <li><a>Item 3</a></li>
+              <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+                <li><a>Home</a></li>
+                <li><a>Services</a></li>
+                <li><a>Portfolio</a></li>
+                <li><a>Blogs</a></li>
+                <li><a>Contact Us</a></li>
               </ul>
             </div>
-            <div class="flex justify-center items-center gap-2">
-              <div class="bg-lgreen p-[6px] rounded-full">
-                <img class="h-3 w-3" src="./img/arrow.png" alt="">
+            <div class="hidden lg:flex lg:items-center">
+              <div class="border-[#E9E9E9] bg-white border rounded-full w-10 h-10 flex justify-center items-center mx-2">
+                <i class="fa-solid fa-magnifying-glass text-lg text-[#737373]"></i>
               </div>
-              <a href="index.html" class="text-textcol text-3xl font-extrabold">Rineterio</a>
+              <div class="border-[#E9E9E9] bg-white border rounded-full w-10 h-10 flex justify-center items-center mx-2">
+                <i class="fa-solid fa-cart-shopping text-lg text-[#737373]"></i>
+              </div>
+              <div class="bg-lgreen flex justify-between gap-2 px-5 py-3 rounded-[32px]">
+                <a class="text-dark text-xl font-extrabold mx-2">Book Consult</a>
+                <div class="bg-dark p-[6px] rounded-full w-7 h-7 flex justify-center">
+                  <i class="-rotate-45 fa-solid fa-arrow-right-long text-white"></i>
+              </div>
+              </div>
             </div>
-          </div>
-          <div class="navbar-center hidden lg:flex">
-            <ul class="menu menu-horizontal px-1">
-              <li><a class="bg-none">Home</a></li>
-              <li><a>Services</a></li>
-              <li><a>Portfolio</a></li>
-              <li><a>Blogs</a></li>
-              <li><a>Contact Us</a></li>
-            </ul>
-          </div>
-          <div class="navbar-end">
-            <a class="btn">Button</a>
           </div>
         </div>
       </nav>
-     </header>
+    </header>
+
+    <div class="banner">
+      <div class="hero min-h-screen">
+        <div class="hero-content text-center">
+          <div class="max-w-md">
+            <h1 class="text-5xl font-bold">Hello there</h1>
+            <p class="py-6">
+              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
+              quasi. In deleniti eaque aut repudiandae et a id nisi.
+            </p>
+            <button class="btn btn-primary">Get Started</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Header section code end -->
 
     <!-- Main section code start -->
