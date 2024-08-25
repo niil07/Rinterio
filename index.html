@@ -41,6 +41,7 @@
                 'lgreen': '#ABEF5F',
                 'textcol': '#212121',
                 'dark': '#1C1C1C',
+                'para': '#494949',
               },
               backgroundImage: {
                 'custom': 'linear-gradient(0deg, #FFF 0%, rgba(255, 255, 255, 0) 100%)',
@@ -60,7 +61,7 @@
           <div class="navbar-start">
             <div class="flex justify-center items-center gap-2">
               <div class="bg-lgreen p-[6px] rounded-full w-7 h-7 flex justify-center">
-                <i class="-rotate-45 fa-solid fa-arrow-right-long "></i>
+                <i class="-rotate-45 fa-solid fa-arrow-right-long arrow"></i>
               </div>
               <a href="index.html" class="text-textcol text-3xl font-extrabold">Rineterio</a>
             </div>
@@ -118,19 +119,29 @@
     </header>
 
     <div class="banner">
-      <div class="hero min-h-screen">
+      <div class="hero">
         <div class="hero-content text-center">
-          <div class="max-w-md">
-            <h1 class="text-5xl font-bold">Hello there</h1>
-            <p class="py-6">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-              quasi. In deleniti eaque aut repudiandae et a id nisi.
+          <div class="max-w-5xl mx-auto">
+            <div class="flex justify-center">
+              <img src="./img/banner.png" alt="">
+            </div>
+            <h1 class="text-3xl lg:text-6xl font-black my-3 lg:font-extrabold text-textCol">
+              A barn house of this design has a <br> striking appearance
+            </h1>
+            <p class="lg:py-6 py-3 text-sm lg:text-base leading-7 font-medium text-para">
+              The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal accents, and large windows that flood the space with natural light.
             </p>
-            <button class="btn btn-primary">Get Started</button>
+            <div class="bg-[#ABEF5F80] flex lg:inline-block justify-center lg:justify-between gap-2 px-5 py-3 rounded-[32px]">
+              <a class="text-dark text-xl font-extrabold mx-2">View Details</a>
+              <div class="bg-lgreen p-[6px] rounded-full w-7 h-7 inline-block justify-center">
+                <i class="-rotate-45 fa-solid fa-arrow-right-long"></i>
+            </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
+    
     <!-- Header section code end -->
 
     <!-- Main section code start -->
